@@ -1,0 +1,33 @@
+body {
+    background-color: rgba(153, 218, 153, 0.479);
+}
+
+.navLinks {
+    font-size: 24px;
+    color: rgb(108, 245, 108);
+    border-bottom: 1px solid rgb(108, 245, 108);
+}
+.navLinks:hover {
+    color: rgb(108, 245, 108);
+    border: none;
+    border-bottom: 2px solid rgb(108, 245, 108);
+    padding: 5px;
+}
+
+.homebutton {
+    font-size: 36px;
+    border: none;
+}
+
+.signup.navbar-brand {
+    color: rgb(108, 245, 108);
+    font-size: 12px;
+    border: none;
+}
+.signup.navbar-brand:hover{
+    font-size: 12px;
+    color: rgb(108, 245, 108);
+    border: none;
+    border-bottom: 2px solid rgb(108, 245, 108);
+    padding: 5px;
+}
