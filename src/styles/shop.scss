@@ -1,0 +1,26 @@
+.card {
+    min-width: 250px;
+}
+
+.buyButton {
+    // border: 1px solid green;
+    color: green;
+}
+.buyButton:hover {
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+.cartButton {
+    color: green;
+}
+.cartButton:hover {
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.514);
+}

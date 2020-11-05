@@ -2,17 +2,22 @@ import React from "react";
 import "../../styles/charities.scss";
 import { Link } from "react-router-dom";
 
-export const CleanWaterFund = () => (
+export const EcologyCenter = () => (
 	<div className="container col-6">
-		<img className="charitypics col-5" src="https://blog.bonus.ly/hubfs/clean-water-fund-logo.jpg" />
-		<h1 className="header">Clean Water Fund</h1>
+		<img
+			className="charitypics col-5"
+			src="https://ecologycenter.org/wp-content/themes/ec/images/ecology_center_header.png"
+		/>
+		<h1 className="header">Ecology Center</h1>
 		<p className="paragraph">
-			&nbsp; Clean Water Fund (CWF) works to develop strong grassroots environmental leadership and to bring
-			together diverse constituencies to work cooperatively for changes that improve their lives, focused on
-			health, consumer, environmental and community problems. Since 1978, Clean Water Fund has helped people
-			campaign successfully for cleaner and safer water, cleaner air, and protection from toxic pollution in our
-			homes, neighborhoods and workplaces. Clean Water Funds programs build on and complement those of Clean Water
-			Action, which has helped develop, pass, strengthen and defend the nations major water and toxics laws.
+			&nbsp; The Ecology Center is a membership-based, nonprofit environmental organization based in Ann Arbor,
+			Michigan. Founded by community activists after the countrys first Earth Day in 1970, the Ecology Center is
+			now a regional leader that works for a safe and healthy environment where people live, work, and play. The
+			Ecology Center is a Michigan-based nonprofit environmental organization that works at the local, state, and
+			national levels for clean production, healthy communities, environmental justice, and a sustainable future.
+			The Ecology Center works for a just and healthy environment through grassroots organizing, advocacy,
+			education, and demonstration projects. Today, our major programs are: Climate and Energy; Environmental
+			Education; Environmental Health Project; HealthyStuff.org; Land Use; and Recycle Ann Arbor
 		</p>
 		<div className="d-flex payment">
 			<input type="text" placeholder="$" />
@@ -31,18 +36,18 @@ export const CleanWaterFund = () => (
 				<tr>
 					<th scope="row" />
 					<td>Overall</td>
-					<td>89.35</td>
+					<td>91.16</td>
 					<td>
 						<i className="fas fa-star" />
 						<i className="fas fa-star" />
 						<i className="fas fa-star" />
-						<i className="far fa-star" />
+						<i className="fas fa-star" />
 					</td>
 				</tr>
 				<tr>
 					<th scope="row" />
 					<td>Financial</td>
-					<td>85.49</td>
+					<td>87.50</td>
 					<td>
 						<i className="fas fa-star" />
 						<i className="fas fa-star" />
@@ -53,7 +58,7 @@ export const CleanWaterFund = () => (
 				<tr>
 					<th scope="row" />
 					<td>Accountability / Trasnparency</td>
-					<td>96.00</td>
+					<td>100.00</td>
 					<td>
 						<i className="fas fa-star" />
 						<i className="fas fa-star" />

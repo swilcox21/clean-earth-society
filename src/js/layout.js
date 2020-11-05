@@ -5,6 +5,13 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Charities } from "./views/charities";
 import { CleanWaterFund } from "./views/cleanwaterfund";
+import { EcologyCenter } from "./views/ecologycenter";
+import { CleanOceanAction } from "./views/cleanoceanaction";
+import { CleanAirTaskForce } from "./views/cleanairtaskforce";
+import { ToxicFreeFuture } from "./views/toxicfreefuture";
+import { Payment } from "./views/payment";
+import { Shop } from "./views/shop";
+import { ShopSize } from "./views/shop-size";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -27,6 +34,12 @@ const Layout = () => {
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/charities" component={Charities} />
 						<Route exact path="/cleanwaterfund" component={CleanWaterFund} />
+						<Route exact path="/ecologycenter" component={EcologyCenter} />
+						<Route exact path="/cleanoceanaction" component={CleanOceanAction} />
+						<Route exact path="/cleanairtaskforce" component={CleanAirTaskForce} />
+						<Route exact path="/toxicfreefuture" component={ToxicFreeFuture} />
+						<Route exact path="/shop" component={Shop} />
+						<Route exact path="/payment" component={Payment} />
 
 						<Route exact path="/single/:theid">
 							<Single />

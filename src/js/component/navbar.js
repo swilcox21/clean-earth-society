@@ -14,20 +14,20 @@ export const NavBar = () => {
 		<div className="container-fluid bg-dark">
 			<nav className="navbar d-flex justify-content-between" id="myNavBar">
 				<Link to={`/home/`}>
-					<span className="homebutton">
+					<span className="homebutton ml-5">
 						<i className="fas fa-recycle" />
 					</span>
 				</Link>
 				<Link to={`/charities/`}>
 					<span className="navbar-brand navLinks">CHARITIES</span>
 				</Link>
-				<Link to={`/home/`}>
+				<Link to={`/shop/`}>
 					<span className="navbar-brand navLinks">SHOP</span>
 				</Link>
 				<Link to={`/home/`}>
 					<span className="navbar-brand navLinks">ABOUT</span>
 				</Link>
-				<a className={"nav-item dropdown " + (showDropdown ? "show" : "")}>
+				<a className={"nav-item dropdown" + (showDropdown ? "show" : "")}>
 					<button
 						className="faves btn nav-link dropdown-toggle"
 						href="#"

@@ -4,7 +4,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			cart: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
+			addCart: name => {
+				let tempStore = getStore();
+				let newFavorite = { name: name };
+				tempStore.favorites.push(newFavorite);
+				setStore({ tempStore });
+			},
+
 			deleteFromCart: e => {
 				let { cart } = getStore();
 				setStore({ cart: cart.filter(cart => cart.name != e.name) });
