@@ -9,13 +9,15 @@ export const Home = () => (
 			<h3 className="motto">Whether you believe its round or flat we can all agree it needs to be clean!</h3>
 			<div className="container d-flex justify-content-center mt-3">
 				<Link to={`/charities/`}>
-					<a href="#" className="btn btn-success mr-3">
+					<button href="#" className="btn btn-success mr-3">
 						Donate
-					</a>
+					</button>
 				</Link>
-				<a href="#" className="btn btn-success ml-3 px-4">
-					Shop
-				</a>
+				<Link to={`/shop/`}>
+					<button href="#" className="btn btn-success ml-3 px-4">
+						Shop
+					</button>
+				</Link>
 			</div>
 		</div>
 		<div className="row mx-auto col-10 mt-5">
