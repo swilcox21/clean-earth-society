@@ -8,12 +8,12 @@ export const Home = () => (
 			<div className="appName">Clean Earth Society</div>
 			<h3 className="motto">Whether you believe its round or flat we can all agree it needs to be clean!</h3>
 			<div className="container d-flex justify-content-center mt-3">
-				<Link to={`/charities/`}>
+				<Link to={`/charities`}>
 					<button href="#" className="btn btn-success mr-3">
 						Donate
 					</button>
 				</Link>
-				<Link to={`/shop/`}>
+				<Link to={`/shop`}>
 					<button href="#" className="btn btn-success ml-3 px-4">
 						Shop
 					</button>

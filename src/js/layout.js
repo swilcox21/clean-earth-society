@@ -11,7 +11,7 @@ import { CleanAirTaskForce } from "./views/cleanairtaskforce";
 import { ToxicFreeFuture } from "./views/toxicfreefuture";
 import { Payment } from "./views/payment";
 import { Shop } from "./views/shop";
-import { ShopSize } from "./views/shop-size";
+import { Details } from "./views/details";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -39,6 +39,7 @@ const Layout = () => {
 						<Route exact path="/cleanairtaskforce" component={CleanAirTaskForce} />
 						<Route exact path="/toxicfreefuture" component={ToxicFreeFuture} />
 						<Route exact path="/shop" component={Shop} />
+						<Route exact path="/details" component={Details} />
 						<Route exact path="/payment" component={Payment} />
 
 						<Route exact path="/single/:theid">

@@ -13,18 +13,18 @@ export const NavBar = () => {
 	return (
 		<div className="container-fluid bg-dark">
 			<nav className="navbar d-flex justify-content-between" id="myNavBar">
-				<Link to={`/home/`}>
+				<Link to={`/home`}>
 					<span className="homebutton ml-5">
 						<i className="fas fa-recycle" />
 					</span>
 				</Link>
-				<Link to={`/charities/`}>
+				<Link to={`/charities`}>
 					<span className="navbar-brand navLinks">CHARITIES</span>
 				</Link>
-				<Link to={`/shop/`}>
+				<Link to={`/shop`}>
 					<span className="navbar-brand navLinks">SHOP</span>
 				</Link>
-				<Link to={`/home/`}>
+				<Link to={`/home`}>
 					<span className="navbar-brand navLinks">ABOUT</span>
 				</Link>
 				<a className={"nav-item dropdown" + (showDropdown ? "show" : "")}>
@@ -58,7 +58,7 @@ export const NavBar = () => {
 							: null}
 					</div>
 				</a>
-				<Link to={`/home/`}>
+				<Link to={`/home`}>
 					<span className="navbar-brand signup">sign up</span>
 				</Link>
 			</nav>
