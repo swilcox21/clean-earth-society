@@ -64,9 +64,10 @@ export const Details = props => {
 					<h5 className="card-title">{product.name}</h5>
 					<h4 className="card-text">{product.price}</h4>
 				</div>
-				<div className="row ml-auto">
+				<div className="row mx-auto">
 					<button
 						className="btn buyButton mx-1"
+						disabled={(product.color && currentColor == "default") || (product.sizes && !currentSize)}
 						onClick={e => {
 							let item = {
 								name: product.name,
@@ -78,13 +79,8 @@ export const Details = props => {
 							actions.buyNow(item);
 							history.push("/payment");
 						}}>
-						$ $ $
+						<strong>$ BUY NOW $</strong>
 					</button>
-					{/* <Link to={`/payment/`}>
-						<button href="#" className="btn buyButton mx-1">
-							<strong>$ $ $</strong>
-						</button>
-					</Link> */}
 					<a href="#" className="btn cartButton mx-1">
 						<i className="fas fa-cart-plus" />
 					</a>

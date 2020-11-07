@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import "../../styles/home.scss";
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
+	<footer className="footer mt-5 py-3 text-center">
+		<h3 className="footer">
+			<i className="fas fa-recycle" /> &nbsp; &nbsp; &nbsp; CLEAN EARTH SOCIETY &nbsp; &nbsp; &nbsp;{" "}
+			<i className="fas fa-recycle" />
+		</h3>
 	</footer>
 );

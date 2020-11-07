@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			user: false,
 			cart: [],
 			buynow: {},
 			products: [
@@ -57,6 +58,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			logging: user => {
+				setStore({ user: !user });
+			},
+
 			buyNow: item => {
 				setStore({
 					buynow: item

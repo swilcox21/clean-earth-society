@@ -12,6 +12,8 @@ import { ToxicFreeFuture } from "./views/toxicfreefuture";
 import { Payment } from "./views/payment";
 import { Shop } from "./views/shop";
 import { Details } from "./views/details";
+import { SignUp } from "./views/signup";
+import { Login } from "./views/login";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -41,6 +43,8 @@ const Layout = () => {
 						<Route exact path="/shop" component={Shop} />
 						<Route exact path="/details" component={Details} />
 						<Route exact path="/payment" component={Payment} />
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/signup" component={SignUp} />
 
 						<Route exact path="/single/:theid">
 							<Single />

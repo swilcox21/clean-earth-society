@@ -58,9 +58,18 @@ export const NavBar = () => {
 							: null}
 					</div>
 				</a>
-				<Link to={`/home`}>
-					<span className="navbar-brand signup">sign up</span>
-				</Link>
+				{store.user ? (
+					<>
+						<h5 className="welcome">Welcome, Sam</h5>
+						<span className="logoutButton" onClick={() => actions.logging(store.user)}>
+							<span className="navbar-brand signup">LOGOUT</span>
+						</span>
+					</>
+				) : (
+					<Link to={`/login`}>
+						<span className="navbar-brand signup">LOGIN</span>
+					</Link>
+				)}
 			</nav>
 		</div>
 	);
