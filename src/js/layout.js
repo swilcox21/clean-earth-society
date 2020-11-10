@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
 import { Home } from "./views/home";
+import { About } from "./views/about";
 import { Charities } from "./views/charities";
 import { CleanWaterFund } from "./views/cleanwaterfund";
 import { EcologyCenter } from "./views/ecologycenter";
@@ -11,12 +11,15 @@ import { CleanAirTaskForce } from "./views/cleanairtaskforce";
 import { ToxicFreeFuture } from "./views/toxicfreefuture";
 import { Payment } from "./views/payment";
 import { Shop } from "./views/shop";
+import { History } from "./views/history";
 import { Details } from "./views/details";
 import { SignUp } from "./views/signup";
+import { Profile } from "./views/profile";
+import { Transactions } from "./views/transactions";
 import { Login } from "./views/login";
+import { Cart } from "./views/cart";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-
 import { NavBar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -34,6 +37,7 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/home" component={Home} />
+						<Route exact path="/about" component={About} />
 						<Route exact path="/charities" component={Charities} />
 						<Route exact path="/cleanwaterfund" component={CleanWaterFund} />
 						<Route exact path="/ecologycenter" component={EcologyCenter} />
@@ -45,6 +49,10 @@ const Layout = () => {
 						<Route exact path="/payment" component={Payment} />
 						<Route exact path="/login" component={Login} />
 						<Route exact path="/signup" component={SignUp} />
+						<Route exact path="/cart" component={Cart} />
+						<Route exact path="/history" component={History} />
+						<Route exact path="/profile" component={Profile} />
+						<Route exact path="/transactions" component={Transactions} />
 
 						<Route exact path="/single/:theid">
 							<Single />

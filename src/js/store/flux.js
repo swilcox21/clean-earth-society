@@ -2,8 +2,30 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			user: false,
+			profile: {
+				firstName: "Sam"
+			},
+			history: [
+				{
+					name: "Recycle T-shirt",
+					image:
+						"https://cdn.shopify.com/s/files/1/1876/2387/products/BLACK_f7d63ee6-bddb-4a6e-a316-13088a442fd1_2000x.JPG?v=1551835874",
+					color: "black",
+					size: "XL",
+					units: 1,
+					price: "$15.99",
+					date: "11/10/2020"
+				},
+				{
+					name: "Earth Necklace Glass Pendant",
+					image: "https://i.etsystatic.com/6406663/r/il/d22283/674839744/il_794xN.674839744_mjdg.jpg",
+					units: 1,
+					price: "$25.99",
+					date: "11/5/2020"
+				}
+			],
 			cart: [],
-			buynow: {},
+			buynow: null,
 			products: [
 				{
 					name: "Recycle t-shirt",
@@ -69,16 +91,43 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return true;
 			},
 
-			addCart: name => {
+			addUser: user => {
+				setStore({
+					profile: user
+				});
+				return true;
+			},
+
+			clearBuyNow: () => {
+				setStore({
+					buynow: null
+				});
+			},
+
+			// addUser: user => {
+			// 	let tempStore = getStore();
+			// 	tempStore.profile.push(user);
+			// 	setStore({ tempStore });
+			// },
+
+			addCart: item => {
 				let tempStore = getStore();
-				let newFavorite = { name: name };
-				tempStore.favorites.push(newFavorite);
+				tempStore.cart.push(item);
 				setStore({ tempStore });
 			},
 
 			deleteFromCart: e => {
 				let { cart } = getStore();
-				setStore({ cart: cart.filter(cart => cart.name != e.name) });
+				setStore({ cart: cart.filter((cart, index) => index != e) });
+			},
+
+			subTotal: () => {
+				let { cart } = getStore();
+				let total = 0;
+				for (let x of cart) {
+					total += x.subTotal;
+				}
+				return total;
 			},
 
 			loadSomeData: () => {

@@ -23,6 +23,7 @@ export class SignUp extends React.Component {
 		super(props);
 		this.state = {
 			firstName: "",
+			lastName: "",
 			email: "",
 			password: "",
 			errors: {
@@ -64,91 +65,109 @@ export class SignUp extends React.Component {
 	render() {
 		const { errors } = this.state;
 		return (
-			<div className="container col-4 mt-5 loginBox">
-				<div className="row">
-					<div className="col-md-5 mx-auto">
-						<div id="second">
-							<div className="myform form ">
-								<div className="logo mb-3">
-									<div className="col-md-12 text-center">
-										<h1>Sign Up</h1>
-										<small>please fill all required * feilds</small>
+			<Context.Consumer>
+				{({ actions, store }) => (
+					<div className="container col-4 mt-5 loginBox">
+						<div className="row">
+							<div className="col-md-5 mx-auto">
+								<div id="second">
+									<div className="myform form ">
+										<div className="logo mb-3">
+											<div className="col-md-12 text-center">
+												<h1>Sign Up</h1>
+												<small>please fill all required * feilds</small>
+											</div>
+										</div>
+										<form onSubmit={this.handleChange} noValidate>
+											<div className="firstName">
+												<label htmlFor="firstName">First Name *</label>
+												<input
+													type="text"
+													name="firstName"
+													id="firstName"
+													className="form-control"
+													aria-describedby="emailHelp"
+													placeholder="Enter Firstname"
+													onChange={this.handleChange}
+													noValidate
+												/>
+												{errors.firstName.length > 0 && (
+													<span className="error">{errors.firstName}</span>
+												)}
+											</div>
+											<div className="lastName">
+												<label htmlFor="lastName">Last Name</label>
+												<input
+													type="text"
+													name="lastName"
+													className="form-control"
+													id="lastName"
+													aria-describedby="emailHelp"
+													placeholder="Enter Lastname"
+													onChange={this.handleChange}
+												/>
+											</div>
+											<div className="email">
+												<label htmlFor="email">Email address *</label>
+												<input
+													type="email"
+													name="email"
+													className="form-control"
+													id="email"
+													aria-describedby="emailHelp"
+													placeholder="Enter email"
+													onChange={this.handleChange}
+													noValidate
+												/>
+												{errors.email.length > 0 && (
+													<span className="error">{errors.email}</span>
+												)}
+											</div>
+											<div className="password mb-2">
+												<label htmlFor="password">Password *</label>
+												<input
+													type="password"
+													name="password"
+													id="password"
+													className="form-control"
+													aria-describedby="emailHelp"
+													placeholder="Enter Password"
+													onChange={this.handleChange}
+													noValidate
+												/>
+												{errors.password.length > 0 && (
+													<span className="error">{errors.password}</span>
+												)}
+											</div>
+											<br />
+											{validateForm(this.state.errors) && (
+												<div className="col-md-12 text-center mb-3">
+													<Link to={"/login"}>
+														<button
+															onClick={e => {
+																let user = {
+																	firstName: this.state.firstName,
+																	lastName: this.state.lastName,
+																	email: this.state.email,
+																	password: this.state.password
+																};
+																actions.addUser(user);
+															}}
+															type="submit"
+															className=" btn btn-block mybtn btn-primary tx-tfm mt-2 submit">
+															REGISTER
+														</button>
+													</Link>
+												</div>
+											)}
+										</form>
 									</div>
 								</div>
-								<form onSubmit={this.handleChange} noValidate>
-									<div className="firstName">
-										<label htmlFor="firstName">First Name *</label>
-										<input
-											type="text"
-											name="firstName"
-											id="firstName"
-											className="form-control"
-											aria-describedby="emailHelp"
-											placeholder="Enter Firstname"
-											onChange={this.handleChange}
-											noValidate
-										/>
-										{errors.firstName.length > 0 && (
-											<span className="error">{errors.firstName}</span>
-										)}
-									</div>
-									<div className="lastName">
-										<label htmlFor="lastName">Last Name</label>
-										<input
-											type="text"
-											name="lastName"
-											className="form-control"
-											id="lastName"
-											aria-describedby="emailHelp"
-											placeholder="Enter Lastname"
-										/>
-									</div>
-									<div className="email">
-										<label htmlFor="email">Email address *</label>
-										<input
-											type="email"
-											name="email"
-											className="form-control"
-											id="email"
-											aria-describedby="emailHelp"
-											placeholder="Enter email"
-											onChange={this.handleChange}
-											noValidate
-										/>
-										{errors.email.length > 0 && <span className="error">{errors.email}</span>}
-									</div>
-									<div className="password mb-2">
-										<label htmlFor="password">Password *</label>
-										<input
-											type="password"
-											name="password"
-											id="password"
-											className="form-control"
-											aria-describedby="emailHelp"
-											placeholder="Enter Password"
-											onChange={this.handleChange}
-											noValidate
-										/>
-										{errors.password.length > 0 && <span className="error">{errors.password}</span>}
-									</div>
-									<br />
-									{validateForm(this.state.errors) && (
-										<Link to={"/login"}>
-											<div className="col-md-12 text-center mb-3">
-												<button
-													type="submit"
-													className=" btn btn-block mybtn btn-primary tx-tfm mt-2 submit">
-													REGISTER
-												</button>
-											</div>
-										</Link>
-									)}
-								</form>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				)}
+			</Context.Consumer>
 		);
 	}
 }

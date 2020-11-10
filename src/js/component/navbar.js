@@ -24,9 +24,10 @@ export const NavBar = () => {
 				<Link to={`/shop`}>
 					<span className="navbar-brand navLinks">SHOP</span>
 				</Link>
-				<Link to={`/home`}>
+				<Link to={`/about`}>
 					<span className="navbar-brand navLinks">ABOUT</span>
 				</Link>
+
 				<a className={"nav-item dropdown" + (showDropdown ? "show" : "")}>
 					<button
 						className="faves btn nav-link dropdown-toggle"
@@ -50,9 +51,9 @@ export const NavBar = () => {
 									<li
 										key={index}
 										className="dropdown-item d-flex align-items-center justify-content-between">
-										<Link to={`/details/${index + 1}`}>{elm.name}</Link>
+										<Link to={`/cart`}>{elm.name}</Link>
 										&nbsp;&nbsp;
-										<i className="fas fa-backspace" onClick={() => actions.deleteFromCart(elm)} />
+										<i className="fas fa-backspace" onClick={() => actions.deleteFromCart(index)} />
 									</li>
 							  ))
 							: null}
@@ -60,7 +61,9 @@ export const NavBar = () => {
 				</a>
 				{store.user ? (
 					<>
-						<h5 className="welcome">Welcome, Sam</h5>
+						<Link to="/profile">
+							<h5 className="welcome">Welcome, {store.profile.firstName}</h5>
+						</Link>
 						<span className="logoutButton" onClick={() => actions.logging(store.user)}>
 							<span className="navbar-brand signup">LOGOUT</span>
 						</span>

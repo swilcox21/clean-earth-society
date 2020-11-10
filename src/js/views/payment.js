@@ -3,6 +3,7 @@ import "../../styles/payment.scss";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Product } from "../component/productcard";
+import { CartPayment } from "../component/cartpayment";
 import PropTypes from "prop-types";
 
 const validateForm = errors => {
@@ -101,7 +102,8 @@ export class Payment extends React.Component {
 						<div className="row mx-auto">
 							<div className="panel panel-default">
 								<div className="panel-heading">
-									<div className="form-row">
+									<h3>Shipping Address</h3>
+									<div className="form-row mt-4">
 										<form onSubmit={this.handleChange} noValidate />
 										<div className="firstName col-md-6 text-left">
 											<label htmlFor="firstName">FIRST NAME</label>
@@ -259,7 +261,7 @@ export class Payment extends React.Component {
 											/>
 											<img
 												className="img-responsive images"
-												src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png"
+												src="https://seeklogo.com/images/D/-logo-C2F4F2FB11-seeklogo.com.png"
 											/>
 										</div>
 									</div>
@@ -339,32 +341,39 @@ export class Payment extends React.Component {
 										</div>
 									</form>
 								</div>
-								{store.buynow && (
+								{store.buynow ? (
 									<div>
-										<h5>
-											Item: &nbsp; &nbsp;
-											{store.buynow.name}
-										</h5>
-										{store.buynow.color == "default" ? null : (
-											<h5>Color: &nbsp; &nbsp; {store.buynow.color}</h5>
-										)}
-										{store.buynow.size == "" ? null : (
-											<h5>Size: &nbsp; &nbsp; {store.buynow.size}</h5>
-										)}
+										<div className="card col-9 mb-3">
+											<div className="row no-gutters">
+												<div className="col-md-4">
+													<img src={store.buynow.image} className="card-img" alt="..." />
+												</div>
+												<div className="col-md-8">
+													<div className="card-body">
+														<h5 className="card-title">{store.buynow.name}</h5>
+														<p className="card-text cardText">
+															{store.buynow.color == "default"
+																? null
+																: store.buynow.color}
+														</p>
+														<p className="card-text cardText">
+															{store.buynow.size && store.buynow.size}
+														</p>
+														<p className="card-text cardText">
+															Qty: &nbsp; {store.buynow.units}
+														</p>
+														<p className="card-text cardText">{store.buynow.subTotal}</p>
+													</div>
+												</div>
+											</div>
+										</div>
 										<h3>Sub Total: &nbsp; &nbsp; {store.buynow.subTotal}</h3>
 									</div>
-								)}
-								<div className="form-check form-check-inline mt-2">
-									<input
-										className="form-check-input"
-										type="checkbox"
-										id="inlineCheckbox1"
-										value="option1"
-									/>
-									<label className="form-check-label" htmlFor="inlineCheckbox1">
-										use billing for shipping address
-									</label>
-								</div>
+								) : null}
+								{store.buynow
+									? null
+									: store.cart.map((item, index) => <CartPayment key={index} item={item} />)}
+								{store.buynow ? null : <h3>Sub Total: {actions.subTotal()}</h3>}
 								<div className="panel-footer">
 									{validateForm(this.state.errors) && (
 										<div className="panel-footer">

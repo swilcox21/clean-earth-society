@@ -1,10 +1,10 @@
 import React from "react";
 import "../../styles/shop.scss";
 import { Link } from "react-router-dom";
-import { Product } from "../component/productcard";
 import { Context } from "../store/appContext";
+import { HistoryComponent } from "../component/historycomponent";
 
-export class Shop extends React.Component {
+export class History extends React.Component {
 	constructor() {
 		super();
 		this.state = {};
@@ -16,8 +16,10 @@ export class Shop extends React.Component {
 					{({ actions, store }) => (
 						<div className="container col-6 mx-auto mt-3">
 							<div className="row mx-auto">
-								{store.products
-									? store.products.map((product, index) => <Product key={index} product={product} />)
+								{store.history
+									? store.history.map((recents, index) => (
+											<HistoryComponent key={index} recents={recents} />
+									  ))
 									: null}
 							</div>
 						</div>

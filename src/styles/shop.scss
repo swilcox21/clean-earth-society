@@ -2,6 +2,11 @@
     min-width: 250px;
 }
 
+.history {
+    // position: absolute;
+    float: right;
+}
+
 .buyButton {
     // border: 1px solid green;
     color: green;
@@ -22,5 +27,5 @@
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.514);
+    background-color: white;
 }

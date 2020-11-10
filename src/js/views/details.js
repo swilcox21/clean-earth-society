@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import "../../styles/details.scss";
 import { Link, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -8,6 +9,7 @@ export const Details = props => {
 	const product = props.location.state.product;
 	const [currentColor, setCurrentColor] = useState("default");
 	const [currentSize, setCurrentSize] = useState("");
+	const [count, setCount] = useState(1);
 	const history = useHistory();
 	// console.log("hi", Object.keys(color));
 	return (
@@ -19,11 +21,12 @@ export const Details = props => {
 					alt="..."
 				/>
 				<div className="card-body">
+					<h5 className="card-title">{product.name}</h5>
 					<fieldset className="radiogroup">
 						<legend />
 						{product.sizes
 							? product.sizes.map((size, index) => (
-									<div className="form-check form-check-inline" key={index}>
+									<div className="form-check form-check-inline mb-1" key={index}>
 										<input
 											onClick={() => setCurrentSize(Object.keys(size))}
 											className="form-check-input"
@@ -39,12 +42,12 @@ export const Details = props => {
 							  ))
 							: null}
 					</fieldset>
-					<br />
+					{/* <br /> */}
 					{product.color
 						? product.color.map((color, ind) => {
 								return (
 									<>
-										<div className="form-check form-check-inline">
+										<div className="form-check form-check-inline mb-1">
 											<input
 												onClick={() => setCurrentColor(Object.keys(color))}
 												className="form-check-input"
@@ -61,8 +64,19 @@ export const Details = props => {
 								);
 						  })
 						: null}
-					<h5 className="card-title">{product.name}</h5>
-					<h4 className="card-text">{product.price}</h4>
+					<div className="countInput ml-3">
+						<input
+							onChange={e => setCount(e.target.value)}
+							className="form-check-input countInput pl-2"
+							type="number"
+							name="count"
+							id="count"
+							value={count}
+						/>
+					</div>
+					<br />
+					<br />
+					<h4 className="card-text">${product.price}</h4>
 				</div>
 				<div className="row mx-auto">
 					<button
@@ -72,18 +86,35 @@ export const Details = props => {
 							let item = {
 								name: product.name,
 								unitPrice: product.price,
-								subTotal: 1 * product.price,
+								units: count,
+								subTotal: count * product.price,
 								color: currentColor,
-								size: currentSize
+								size: currentSize,
+								image: product.image[currentColor]
 							};
 							actions.buyNow(item);
 							history.push("/payment");
 						}}>
 						<strong>$ BUY NOW $</strong>
 					</button>
-					<a href="#" className="btn cartButton mx-1">
+					<button
+						href="#"
+						className="btn cartButton mx-1"
+						disabled={(product.color && currentColor == "default") || (product.sizes && !currentSize)}
+						onClick={e => {
+							let item = {
+								name: product.name,
+								unitPrice: product.price,
+								subTotal: count * product.price,
+								color: currentColor,
+								size: currentSize,
+								units: count,
+								image: product.image[currentColor]
+							};
+							actions.addCart(item);
+						}}>
 						<i className="fas fa-cart-plus" />
-					</a>
+					</button>
 				</div>
 			</div>
 		</div>
