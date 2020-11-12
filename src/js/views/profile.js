@@ -11,16 +11,16 @@ export const Profile = props => {
 			<h1>Hello Sam</h1>
 			<div className="text-left">
 				<h5>
-					First Name: &nbsp; &nbsp; <strong>{store.profile.firstName}</strong>
+					First Name: &nbsp; &nbsp; <strong>{store.user.firstName}</strong>
 				</h5>
 				<h5>
-					Last Name: &nbsp; &nbsp; <strong>{store.profile.lastName}</strong>
+					Last Name: &nbsp; &nbsp; <strong>{store.user.lastName}</strong>
 				</h5>
 				<h5>
-					Email: &nbsp; &nbsp; <strong>{store.profile.email}</strong>
+					Email: &nbsp; &nbsp; <strong>{store.user.email}</strong>
 				</h5>
 				<h5>
-					password: &nbsp; &nbsp; <strong>{store.profile.password}</strong>
+					password: &nbsp; &nbsp; <strong>{store.user.password}</strong>
 				</h5>
 			</div>
 			<div className="row">

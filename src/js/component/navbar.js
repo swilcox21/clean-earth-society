@@ -51,7 +51,9 @@ export const NavBar = () => {
 									<li
 										key={index}
 										className="dropdown-item d-flex align-items-center justify-content-between">
-										<Link to={`/cart`}>{elm.name}</Link>
+										<Link to={`/cart`}>
+											{elm.name} &nbsp; {elm.units}
+										</Link>
 										&nbsp;&nbsp;
 										<i className="fas fa-backspace" onClick={() => actions.deleteFromCart(index)} />
 									</li>
@@ -62,7 +64,7 @@ export const NavBar = () => {
 				{store.user ? (
 					<>
 						<Link to="/profile">
-							<h5 className="welcome">Welcome, {store.profile.firstName}</h5>
+							<h5 className="welcome">Welcome, {store.user.firstName}</h5>
 						</Link>
 						<span className="logoutButton" onClick={() => actions.logging(store.user)}>
 							<span className="navbar-brand signup">LOGOUT</span>

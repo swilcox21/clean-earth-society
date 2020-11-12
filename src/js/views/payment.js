@@ -378,7 +378,15 @@ export class Payment extends React.Component {
 									{validateForm(this.state.errors) && (
 										<div className="panel-footer">
 											<div className="row">
-												<button className="btn btn-success btn-lg btn-block">
+												<button
+													className="btn btn-success btn-lg btn-block"
+													onClick={() => {
+														store.buynow
+															? actions.confirmBuyNowPayment(store.buynow)
+															: store.cart.forEach((item, index) => {
+																	return actions.confirmBuyNowPayment(item);
+															  });
+													}}>
 													Confirm Payment
 												</button>
 											</div>

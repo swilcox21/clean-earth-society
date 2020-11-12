@@ -1,28 +1,28 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user: false,
-			profile: {
+			active: false,
+			user: {
 				firstName: "Sam"
 			},
 			history: [
-				{
-					name: "Recycle T-shirt",
-					image:
-						"https://cdn.shopify.com/s/files/1/1876/2387/products/BLACK_f7d63ee6-bddb-4a6e-a316-13088a442fd1_2000x.JPG?v=1551835874",
-					color: "black",
-					size: "XL",
-					units: 1,
-					price: "$15.99",
-					date: "11/10/2020"
-				},
-				{
-					name: "Earth Necklace Glass Pendant",
-					image: "https://i.etsystatic.com/6406663/r/il/d22283/674839744/il_794xN.674839744_mjdg.jpg",
-					units: 1,
-					price: "$25.99",
-					date: "11/5/2020"
-				}
+				// {
+				// 	name: "Recycle T-shirt",
+				// 	image:
+				// 		"https://cdn.shopify.com/s/files/1/1876/2387/products/BLACK_f7d63ee6-bddb-4a6e-a316-13088a442fd1_2000x.JPG?v=1551835874",
+				// 	color: "black",
+				// 	size: "XL",
+				// 	units: 1,
+				// 	price: "$15.99",
+				// 	date: "11/10/2020"
+				// },
+				// {
+				// 	name: "Earth Necklace Glass Pendant",
+				// 	image: "https://i.etsystatic.com/6406663/r/il/d22283/674839744/il_794xN.674839744_mjdg.jpg",
+				// 	units: 1,
+				// 	price: "$25.99",
+				// 	date: "11/5/2020"
+				// }
 			],
 			cart: [],
 			buynow: null,
@@ -80,8 +80,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			logging: user => {
-				setStore({ user: !user });
+			logging: active => {
+				setStore({ active: !active });
 			},
 
 			buyNow: item => {
@@ -93,7 +93,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			addUser: user => {
 				setStore({
-					profile: user
+					user: user
 				});
 				return true;
 			},
@@ -104,11 +104,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				});
 			},
 
-			// addUser: user => {
-			// 	let tempStore = getStore();
-			// 	tempStore.profile.push(user);
-			// 	setStore({ tempStore });
-			// },
+			confirmBuyNowPayment: item => {
+				let tempStore = getStore();
+				tempStore.history.push(item);
+				setStore({ tempStore });
+			},
+
+			confirmCartPayment: () => {},
 
 			addCart: item => {
 				let tempStore = getStore();
