@@ -1,5 +1,6 @@
 body {
-    background-color: rgba(153, 218, 153, 0.479);
+   background: rgb(12,126,37);
+background: linear-gradient(90deg, rgba(12,126,37,0.8) 5%, rgb(124, 230, 95) 20%, rgb(141, 230, 86) 80%, rgba(12,126,37,0.8) 95%);
 }
 
 .welcome {
@@ -20,6 +21,12 @@ body {
     border: none;
     border-bottom: 2px solid rgb(108, 245, 108);
     padding: 5px;
+}
+
+.shopcart {
+    font-size: 24px;
+    margin-right: 10px;
+    color: rgb(108, 245, 108);
 }
 
 .homebutton {

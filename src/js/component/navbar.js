@@ -28,7 +28,12 @@ export const NavBar = () => {
 					<span className="navbar-brand navLinks">ABOUT</span>
 				</Link>
 
-				<a className={"nav-item dropdown" + (showDropdown ? "show" : "")}>
+				<a className={"nav-item dropdown row" + (showDropdown ? "show" : "")}>
+					<Link to="/cart">
+						<span className="shopcart">
+							<i className="fas fa-shopping-cart" />
+						</span>
+					</Link>
 					<button
 						className="faves btn nav-link dropdown-toggle"
 						href="#"
@@ -39,7 +44,7 @@ export const NavBar = () => {
 						aria-expanded={clickedDropDown}
 						onClick={() => setClickedDropdown(!clickedDropDown)}>
 						<span className="badge badge-secondary">
-							<i className="fas fa-shopping-cart" /> &nbsp; &nbsp;
+							&nbsp; &nbsp;
 							{store.cart.length}
 						</span>
 					</button>
@@ -61,12 +66,12 @@ export const NavBar = () => {
 							: null}
 					</div>
 				</a>
-				{store.user ? (
+				{store.active ? (
 					<>
 						<Link to="/profile">
 							<h5 className="welcome">Welcome, {store.user.firstName}</h5>
 						</Link>
-						<span className="logoutButton" onClick={() => actions.logging(store.user)}>
+						<span className="logoutButton" onClick={() => actions.logging(store.active)}>
 							<span className="navbar-brand signup">LOGOUT</span>
 						</span>
 					</>

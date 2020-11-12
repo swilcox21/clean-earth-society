@@ -10,8 +10,13 @@ export const Details = props => {
 	const [currentColor, setCurrentColor] = useState("default");
 	const [currentSize, setCurrentSize] = useState("");
 	const [count, setCount] = useState(1);
+	const [show, setShow] = useState(false);
 	const history = useHistory();
-	// console.log("hi", Object.keys(color));
+	if (show) {
+		setInterval(() => {
+			setShow(false);
+		}, 5000);
+	}
 	return (
 		<div className="container col-4 mx-auto mt-3">
 			<div className="card">
@@ -112,11 +117,13 @@ export const Details = props => {
 								image: product.image[currentColor]
 							};
 							actions.addCart(item);
+							setShow(true);
 						}}>
 						<i className="fas fa-cart-plus" />
 					</button>
 				</div>
 			</div>
+			<div className={show ? "text-center" : "d-none"}>Added to Cart</div>
 		</div>
 	);
 };

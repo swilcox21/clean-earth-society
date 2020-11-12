@@ -21,16 +21,17 @@ export const Charities = () => {
 	const handleShowToxic = () => setShowToxic(true);
 	const handleShowEcology = () => setShowEcology(true);
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container mt-3 text-center">
 			<ModalWater show={showWater} onClose={() => setShowWater(false)} />
 			<ModalAir show={showAir} onClose={() => setShowAir(false)} />
 			<ModalOcean show={showOcean} onClose={() => setShowOcean(false)} />
 			<ModalToxic show={showToxic} onClose={() => setShowToxic(false)} />
 			<ModalEcology show={showEcology} onClose={() => setShowEcology(false)} />
-			<h1>
+			<h1 className="text-center mt-4 mb-3">CHARITIES</h1>
+			<h2>
 				These non-profits are doing some amazing work to help protect our mother earth and all of her
 				inhabitants
-			</h1>
+			</h2>
 			<div className="row mx-auto col-10 mt-5">
 				<Link to={`/cleanwaterfund`} className="charitypics col-6">
 					<img className="charitypics col-12" src="https://blog.bonus.ly/hubfs/clean-water-fund-logo.jpg" />

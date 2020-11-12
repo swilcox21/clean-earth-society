@@ -61,9 +61,9 @@ export class Login extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ actions, store }) => (
-					<div className="container col-4 mt-5 loginBox">
+					<div className="container col-3 loginBox">
 						<div className="row">
-							<div className="col-md-5 mx-auto">
+							<div className="col-7 mx-auto">
 								<div id="first">
 									<div className="myform form ">
 										<div className="logo mb-3">
@@ -117,13 +117,13 @@ export class Login extends React.Component {
 													</Link>
 												</div>
 											)}
-											<div className="form-group mt-3">
+											<div className="form-group mt-5">
 												<h5 className="text-center">Dont have account?</h5>
 											</div>
 										</form>
 									</div>
 									<Link to={"/signup"}>
-										<div className="col-md-12 text-center mb-3">
+										<div className="col-md-12 text-center mt-1 mb-5">
 											<button type="submit" className=" btn btn-block mybtn btn-primary tx-tfm">
 												REGISTER
 											</button>

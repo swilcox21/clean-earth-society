@@ -1,0 +1,20 @@
+h1 {
+    border-bottom: 1px solid green;
+    color: green;
+}
+
+.buyAll {
+    background-color: rgba(255, 255, 255, 0.589);
+    color: green;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.buyAll:hover {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}

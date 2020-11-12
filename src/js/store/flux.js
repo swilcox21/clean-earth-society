@@ -2,9 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			active: false,
-			user: {
-				firstName: "Sam"
-			},
+			user: {},
 			history: [
 				// {
 				// 	name: "Recycle T-shirt",
@@ -24,6 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// 	date: "11/5/2020"
 				// }
 			],
+			transactions: [],
 			cart: [],
 			buynow: null,
 			products: [
@@ -82,6 +81,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			logging: active => {
 				setStore({ active: !active });
+			},
+
+			editProfile: userInfo => {
+				setStore({ user: userInfo });
 			},
 
 			buyNow: item => {

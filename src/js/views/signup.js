@@ -67,9 +67,9 @@ export class SignUp extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ actions, store }) => (
-					<div className="container col-4 mt-5 loginBox">
+					<div className="container col-3 loginBox">
 						<div className="row">
-							<div className="col-md-5 mx-auto">
+							<div className="col-md-7 mx-auto">
 								<div id="second">
 									<div className="myform form ">
 										<div className="logo mb-3">

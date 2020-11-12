@@ -18,7 +18,7 @@ export const ModalAir = props => {
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
 					<div className="modal-header">
-						<h5 className="modal-title">About to route you to this charities payment screen...</h5>
+						<h3 className="modal-title">Clean Air Task Force! GREAT CHOICE!</h3>
 						{props.onClose ? (
 							<button
 								onClick={() => props.onClose()}
@@ -33,9 +33,14 @@ export const ModalAir = props => {
 						)}
 					</div>
 					<div className="modal-body">
-						<p>fill out all required fields and they will proccess your donation</p>
-						<p>on behalf of C.E.S. we would like to say thanks for your generosity</p>
-						<p>please feel free to revisit and check out our shop to help support this site =]</p>
+						<h5>
+							<strong>We will now be redirecting you to their donations screen</strong>
+						</h5>
+						<p>once there you can fill out all of the required fields to submit your donation</p>
+						<p>
+							on behalf of C.E.S. we would like to say thanks for your generosity please feel free to
+							revisit and check out our shop to help support this site =]
+						</p>
 					</div>
 					<div className="modal-footer mx-auto">
 						<a

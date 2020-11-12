@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
-export const ModalWater = props => {
+export const ModalPayment = props => {
 	const [state, setState] = useState({
 		//initialize state here
 	});
@@ -17,8 +18,8 @@ export const ModalWater = props => {
 		<div className="modal" tabIndex="-1" role="dialog" style={{ display: props.show ? "inline-block" : "none" }}>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
-					<div className="modal-header">
-						<h3 className="modal-title">Clean Water Fund! GREAT CHOICE!!</h3>
+					<div className="modal-header paymentModal">
+						<h3 className="paymentModalTitle">Your Purchase has been Confirmed! Thank You!</h3>
 						{props.onClose ? (
 							<button
 								onClick={() => props.onClose()}
@@ -32,30 +33,29 @@ export const ModalWater = props => {
 							""
 						)}
 					</div>
-					<div className="modal-body">
-						<h5>
-							<strong>We will now be redirecting you to their donations screen</strong>
-						</h5>
-						<p>once there you can fill out all of the required fields to submit your donation</p>
-						<p>
-							on behalf of C.E.S. we would like to say thanks for your generosity please feel free to
-							revisit and check out our shop to help support this site =]
-						</p>
-					</div>
 					<div className="modal-footer mx-auto">
-						<a
-							type="button"
-							href="https://cleanwater.salsalabs.org/donate-clean-water-fund-today/index.html"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="btn btn-success"
-							onClick={() => props.onClose()}
-							data-dismiss="modal">
-							PROCEED
-						</a>
-						<button type="button" className="btn btn-secondary" onClick={() => props.onClose()}>
-							STAY PUT
-						</button>
+						<Link to="/shop">
+							<button
+								type="button"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn btn-primary"
+								onClick={() => props.onClose()}
+								data-dismiss="modal">
+								Continue Shopping
+							</button>
+						</Link>
+						<Link to="/history">
+							<button
+								type="button"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn btn-secondary"
+								onClick={() => props.onClose()}
+								data-dismiss="modal">
+								Purchase History
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -66,7 +66,7 @@ export const ModalWater = props => {
  * Define the data-types for
  * your component's properties
  **/
-ModalWater.propTypes = {
+ModalPayment.propTypes = {
 	history: PropTypes.object,
 	onClose: PropTypes.func,
 	show: PropTypes.bool,
@@ -77,7 +77,7 @@ ModalWater.propTypes = {
  * Define the default values for
  * your component's properties
  **/
-ModalWater.defaultProps = {
+ModalPayment.defaultProps = {
 	show: false,
 	onClose: null,
 	id: null

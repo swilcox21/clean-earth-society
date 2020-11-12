@@ -47,3 +47,33 @@
 .cardText {
     font-size: 12px;
 }
+
+.modal-header {
+    background-color: rgb(28, 180, 28);
+}
+
+.paymentModal {
+    background-color: white;
+}
+
+.paymentModalTitle{
+    color: green;
+}
+
+.modal-title {
+    color: white;
+}
+
+.profileInputs {
+    background-color: rgb(150, 214, 132);
+    border-bottom: 1px solid rgb(1, 75, 1);
+    border: none;
+    border-radius: none;
+    font-weight: bold;
+    color: green;
+}
+
+.profileLabels {
+    border-bottom: 1px solid green;
+    font-weight: bold;
+}

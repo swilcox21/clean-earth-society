@@ -15,6 +15,9 @@ export class Shop extends React.Component {
 				<Context.Consumer>
 					{({ actions, store }) => (
 						<div className="container col-6 mx-auto mt-3">
+							<h1 className="mt-4 mb-3 text-center">
+								<strong>SHOP</strong>
+							</h1>
 							<div className="row mx-auto">
 								{store.products
 									? store.products.map((product, index) => <Product key={index} product={product} />)
