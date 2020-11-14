@@ -15,7 +15,15 @@
 }
 
 .readMore {
-    color: blue;
+    color: rgba(0, 0, 255, 0.6);
+}
+
+.articles {
+    margin-top: 200px;
+}
+
+.weeklyCharity {
+    margin-top: 120px;
 }
 
 .missionStatement {
@@ -36,8 +44,14 @@
     padding: 10px;
     background-color: rgba(25, 228, 25, 0.5);
     font-size: 54px;
-    color: white;
+    color: blue;
     // border-bottom: 3px solid rgb(25, 228, 25);
+}
+
+.featureCharity {
+    color: rgba(0, 0, 255, 0.6);
+    font-weight: bold;
+    border-bottom: 1px solid green;
 }
 
 .footer {
@@ -50,6 +64,31 @@
 
 .modal-header {
     background-color: rgb(28, 180, 28);
+}
+
+.carouselInfo {
+    padding: 10px;
+    background-color: rgb(25, 228, 184);
+    color: black;
+}
+
+.carouselReadMore {
+    background-color: rgb(25, 228, 184);
+    margin-top: -35px;
+    padding: 10px;
+    float: right;
+    font-weight: bold;
+}
+
+.carouselLabel {
+    padding: 10px;
+    background-color: rgb(25, 228, 184);
+    color: black;
+    font-size: 24px;
+    // border-bottom: 3px solid rgb(25, 228, 25);
+}
+.carouselImg {
+    max-height: 500px;
 }
 
 .paymentModal {

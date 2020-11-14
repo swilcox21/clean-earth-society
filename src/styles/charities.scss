@@ -12,4 +12,22 @@ img {
 }
 .payment {
     float: right;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(0, 75, 0);
+    background-color: rgba(0, 128, 0, 0.507);
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+}
+.payment:hover {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
 }

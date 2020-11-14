@@ -25,9 +25,9 @@ export const CleanWaterFund = () => {
 					complement those of Clean Water Action, which has helped develop, pass, strengthen and defend the
 					nations major water and toxics laws.
 				</p>
-				<button onClick={() => handleShowWater()} type="button">
-					DONATE
-				</button>
+				<span className="payment" onClick={() => handleShowWater()}>
+					$ DONATE $
+				</span>
 				<table className="table table-dark mt-3 col-8">
 					<thead>
 						<tr>

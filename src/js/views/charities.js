@@ -46,7 +46,7 @@ export const Charities = () => {
 						<div className="readmore text-right text-bottom">read more...</div>
 					</Link>
 					<div className="d-flex payment mt-3">
-						<button onClick={() => handleShowWater()}>DONATE</button>
+						<span onClick={() => handleShowWater()}>$ DONATE $</span>
 					</div>
 				</div>
 			</div>
@@ -67,7 +67,7 @@ export const Charities = () => {
 						<div className="readmore text-right text-bottom">read more...</div>
 					</Link>
 					<div className="d-flex payment mt-3">
-						<button onClick={() => handleShowOcean()}>DONATE</button>
+						<span onClick={() => handleShowOcean()}>$ DONATE $</span>
 					</div>
 				</div>
 			</div>
@@ -88,7 +88,7 @@ export const Charities = () => {
 						<div className="readmore text-right text-bottom">read more...</div>
 					</Link>
 					<div className="d-flex payment mt-3">
-						<button onClick={() => handleShowAir()}>DONATE</button>
+						<span onClick={() => handleShowAir()}>$ DONATE $</span>
 					</div>
 				</div>
 			</div>
@@ -109,7 +109,7 @@ export const Charities = () => {
 						<div className="readmore text-right text-bottom">read more...</div>
 					</Link>
 					<div className="d-flex payment mt-3">
-						<button onClick={() => handleShowToxic()}>DONATE</button>
+						<span onClick={() => handleShowToxic()}>$ DONATE $</span>
 					</div>
 				</div>
 			</div>
@@ -130,7 +130,7 @@ export const Charities = () => {
 						<div className="readmore text-right text-bottom">read more...</div>
 					</Link>
 					<div className="d-flex payment mt-3">
-						<button onClick={() => handleShowEcology()}>DONATE</button>
+						<span onClick={() => handleShowEcology()}>$ DONATE $</span>
 					</div>
 				</div>
 			</div>

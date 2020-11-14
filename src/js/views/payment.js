@@ -54,6 +54,30 @@ export const Payment = () => {
 		}
 	});
 
+	const subTotalFunction = () => {
+		if (store.buynow) {
+			return store.buynow.subTotal;
+		} else {
+			return actions.subTotal();
+		}
+	};
+
+	const last4 = cardNumber => {
+		let lastFour = cardNumber.substr(12, 15);
+		return lastFour;
+	};
+
+	const todaysDate = () => {
+		var d = new Date();
+		let month = "" + (d.getMonth() + 1);
+		let day = "" + d.getDate();
+		let year = d.getFullYear();
+		if (month.length < 2) month = "0" + month;
+		if (day.length < 2) day = "0" + day;
+		return [month, day, year].join("-");
+	};
+	// return JSON.stringify(d);
+
 	const handleClose = () => setShow(false);
 	const handleShowPayment = () => setShowPayment(true);
 
@@ -294,6 +318,7 @@ export const Payment = () => {
 													placeholder="Valid Card Number"
 													id="cardNumber"
 													name="cardNumber"
+													value={state.cardNumber}
 													onChange={handleChange}
 													noValidate
 												/>
@@ -400,7 +425,16 @@ export const Payment = () => {
 														: store.cart.forEach((item, index) => {
 																return actions.confirmBuyNowPayment(item);
 														  });
+													let transaction = {
+														date: todaysDate(),
+														card: last4(cardNumber.value),
+														price: subTotalFunction(),
+														status: "pending"
+													};
+													actions.addTransaction(transaction);
 													handleShowPayment();
+													actions.clearBuyNow();
+													actions.clearCart();
 												}}>
 												Confirm Payment
 											</button>

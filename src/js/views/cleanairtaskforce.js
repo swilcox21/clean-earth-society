@@ -24,7 +24,7 @@ export const CleanAirTaskForce = () => {
 				advocacy leadership, and partnership with the private sector.
 			</p>
 			<div className="d-flex payment">
-				<button onClick={() => handleShowAir()}>DONATE</button>
+				<span onClick={() => handleShowAir()}>$ DONATE $</span>
 			</div>
 			<table className="table table-dark mt-3 col-8">
 				<thead>

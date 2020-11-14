@@ -29,7 +29,7 @@ export const EcologyCenter = () => {
 				Ann Arbor
 			</p>
 			<div className="d-flex payment">
-				<button onClick={() => handleShowEcology()}>DONATE</button>
+				<span onClick={() => handleShowEcology()}>$ DONATE $</span>
 			</div>
 			<table className="table table-dark mt-3 col-8">
 				<thead>

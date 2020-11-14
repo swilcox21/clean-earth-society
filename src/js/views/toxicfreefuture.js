@@ -27,7 +27,7 @@ export const ToxicFreeFuture = () => {
 				of science and grounded in public policy that promotes a toxic free environment.
 			</p>
 			<div className="d-flex payment">
-				<button onClick={() => handleShowToxic()}>DONATE</button>
+				<span onClick={() => handleShowToxic()}>$ DONATE $</span>
 			</div>
 			<table className="table table-dark mt-3 col-8">
 				<thead>

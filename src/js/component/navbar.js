@@ -15,7 +15,7 @@ export const NavBar = () => {
 			<nav className="navbar d-flex justify-content-between" id="myNavBar">
 				<Link to={`/home`}>
 					<span className="homebutton ml-5">
-						<i className="fas fa-recycle" />
+						<i className="fas fa-recycle" /> C. E. S.
 					</span>
 				</Link>
 				<Link to={`/charities`}>
@@ -72,7 +72,9 @@ export const NavBar = () => {
 							<h5 className="welcome">Welcome, {store.user.firstName}</h5>
 						</Link>
 						<span className="logoutButton" onClick={() => actions.logging(store.active)}>
-							<span className="navbar-brand signup">LOGOUT</span>
+							<Link to="/home">
+								<span className="navbar-brand signup">LOGOUT</span>
+							</Link>
 						</span>
 					</>
 				) : (

@@ -26,7 +26,7 @@ export const CleanOceanAction = () => {
 				resources for today and for future generations.
 			</p>
 			<div className="d-flex payment">
-				<button onClick={() => handleShowOcean()}>DONATE</button>
+				<span onClick={() => handleShowOcean()}>$ DONATE $</span>
 			</div>
 			<table className="table table-dark mt-3 col-8">
 				<thead>
