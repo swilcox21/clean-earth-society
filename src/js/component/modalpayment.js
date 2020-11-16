@@ -45,7 +45,7 @@ export const ModalPayment = props => {
 								Continue Shopping
 							</button>
 						</Link>
-						<Link to="/history">
+						<Link to="/transactions">
 							<button
 								type="button"
 								target="_blank"
@@ -53,7 +53,7 @@ export const ModalPayment = props => {
 								className="btn btn-secondary"
 								onClick={() => props.onClose()}
 								data-dismiss="modal">
-								Purchase History
+								Transactions
 							</button>
 						</Link>
 					</div>

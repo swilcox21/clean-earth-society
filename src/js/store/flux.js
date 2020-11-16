@@ -78,34 +78,38 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			addUser: user => {
-				let store = getStore();
-				fetch(store.fetchURL + "/user", {
-					method: "POST", // or 'POST'
-					body: JSON.stringify({
-						firstName: user.firstName,
-						lastName: user.lastName,
-						email: user.email,
-						password: user.password,
-						streetAddress: user.streetAddress ? user.streetAddress : "",
-						city: user.city ? user.city : "",
-						theState: user.theState ? user.theState : "",
-						zipCode: user.zipCode ? user.zipCode : "",
-						is_active: true
-					}), // data can be `string` or {object}!
-					headers: {
-						"Content-Type": "application/json"
-					}
-				})
-					.then(res => res.json())
-					.then(response => {
-						console.log("Success:", response);
-						setStore({
-							user: response
-						});
-					})
-					.catch(error => console.error("Error:", error));
-				return true;
+				setStore({ user: user });
 			},
+
+			// addUser: user => {
+			// 	let store = getStore();
+			// 	fetch(store.fetchURL + "/user", {
+			// 		method: "POST", // or 'POST'
+			// 		body: JSON.stringify({
+			// 			firstName: user.firstName,
+			// 			lastName: user.lastName,
+			// 			email: user.email,
+			// 			password: user.password,
+			// 			streetAddress: user.streetAddress ? user.streetAddress : "",
+			// 			city: user.city ? user.city : "",
+			// 			theState: user.theState ? user.theState : "",
+			// 			zipCode: user.zipCode ? user.zipCode : "",
+			// 			is_active: true
+			// 		}), // data can be `string` or {object}!
+			// 		headers: {
+			// 			"Content-Type": "application/json"
+			// 		}
+			// 	})
+			// 		.then(res => res.json())
+			// 		.then(response => {
+			// 			console.log("Success:", response);
+			// 			setStore({
+			// 				user: response
+			// 			});
+			// 		})
+			// 		.catch(error => console.error("Error:", error));
+			// 	return true;
+			// },
 
 			clearBuyNow: () => {
 				setStore({
@@ -129,6 +133,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let tempStore = getStore();
 				tempStore.transactions.push(transaction);
 				setStore({ tempStore });
+			},
+
+			updateTransaction: () => {
+				setTimeout(() => {
+					let tempStore = getStore();
+					tempStore.transactions[tempStore.transactions.length - 1].status = "shipped";
+					setStore({ tempStore });
+				}, 10000);
 			},
 
 			addCart: item => {

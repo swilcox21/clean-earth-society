@@ -435,6 +435,7 @@ export const Payment = () => {
 													handleShowPayment();
 													actions.clearBuyNow();
 													actions.clearCart();
+													actions.updateTransaction();
 												}}>
 												Confirm Payment
 											</button>
