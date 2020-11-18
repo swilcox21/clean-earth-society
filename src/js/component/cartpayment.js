@@ -19,7 +19,7 @@ export const CartPayment = props => {
 						<p className="card-text cardText">{props.item.color == "default" ? null : props.item.color}</p>
 						<p className="card-text cardText">{props.item.size && props.item.size}</p>
 						<p className="card-text cardText">Qty: &nbsp; {props.item.units}</p>
-						<p className="card-text cardText">{props.item.subTotal}</p>
+						<p className="card-text cardText">${props.item.subTotal}</p>
 					</div>
 				</div>
 			</div>
@@ -28,5 +28,6 @@ export const CartPayment = props => {
 };
 CartPayment.propTypes = {
 	item: PropTypes.object,
-	key: PropTypes.number
+	key: PropTypes.number,
+	index: PropTypes.number
 };

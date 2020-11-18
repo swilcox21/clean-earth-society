@@ -1,8 +1,33 @@
 .charitypics {
     max-height: 250.5px;
-    border-radius: 5px;
+    // border-radius: 10px;
+}
+img { 
+    float: left; 
+    min-width: 100px;  
+    border-radius: 100px;
+    animation: fadeIn ease 1.5s;
+    -webkit-animation: fadeIn ease 1.5s;
 }
 
+.container {
+        animation: fadeIn ease .5s;
+    -webkit-animation: fadeIn ease .5s;
+}
+.modal {
+        animation: fadeIn ease .5s;
+    -webkit-animation: fadeIn ease .5s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
 .btn-success {
     font-size: 36px;
 }
@@ -116,4 +141,11 @@
 .profileLabels {
     border-bottom: 1px solid green;
     font-weight: bold;
+}
+
+.fa-trash-alt {
+    cursor: pointer;
+}
+.fa-trash-alt:hover {
+    font-size: 24px;
 }

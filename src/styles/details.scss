@@ -1,3 +1,28 @@
 .countInput {
     width: 45px;
 }
+
+.addToCart {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -35px;
+    font-size: 19px;
+    // border: 1px solid green;
+    color: green;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(95, 248, 95, 0.589);
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}

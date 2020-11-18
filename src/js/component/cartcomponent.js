@@ -15,11 +15,19 @@ export const CartComponent = props => {
 				<div className="col-md-8">
 					<div className="card-body ml-3">
 						<h5 className="card-title">{props.item.name}</h5>
-						<p className="card-text">{props.item.color == "default" ? null : props.item.color}</p>
-						<p className="card-text">{props.item.size && props.item.size}</p>
-						<p className="card-text">{props.item.units}</p>
-						<p className="card-text">{props.item.subTotal}</p>
-						<i className="fas fa-backspace" onClick={() => actions.deleteFromCart(props.index)} />
+						<p className="card-text">
+							{props.item.color == "default" ? null : "color: " + props.item.color}
+						</p>
+						<p className="card-text"> {props.item.size && "size: " + props.item.size}</p>
+						<p className="card-text">
+							Qty: &nbsp;
+							{props.item.units}
+						</p>
+						<p className="card-text">Price: ${props.item.subTotal}</p>
+						<i
+							className="fas fa-trash-alt d-flex justify-content-end"
+							onClick={() => actions.deleteFromCart(props.index)}
+						/>
 					</div>
 				</div>
 			</div>

@@ -138,9 +138,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			updateTransaction: () => {
 				setTimeout(() => {
 					let tempStore = getStore();
+					tempStore.transactions[tempStore.transactions.length - 1].status = "confirmed";
+					setStore({ tempStore });
+				}, 20000);
+				setTimeout(() => {
+					let tempStore = getStore();
 					tempStore.transactions[tempStore.transactions.length - 1].status = "shipped";
 					setStore({ tempStore });
-				}, 10000);
+				}, 30000);
 			},
 
 			addCart: item => {

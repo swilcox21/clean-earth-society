@@ -6,11 +6,26 @@
     margin-top: 150px;
     padding-top: 30px;
     padding-bottom: 50px;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
 }
+
 
 .error {
     color: red;
     font-size:12px;
+}
+
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }
 
 // a{

@@ -1,7 +1,7 @@
 img { 
     float: left; 
     min-width: 100px;  
-    border-radius: 5px;
+    border-radius: 10px;
 } 
 .paragraph { 
     text-align: justify;  
@@ -17,8 +17,8 @@ img {
     font-weight: bold;
     color: rgb(0, 75, 0);
     background-color: rgba(0, 128, 0, 0.507);
-    border: 2px solid green;
-    border-radius: 10px;
+    // border: 2px solid green;
+    border-radius: 5px;
     padding: 8px;
     font-size: 18px;
 }
@@ -28,7 +28,7 @@ img {
     font-weight: bold;
     color: white;
     background-color: green;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 8px;
     font-size: 18px;
 }

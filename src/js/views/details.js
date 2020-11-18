@@ -15,7 +15,7 @@ export const Details = props => {
 	if (show) {
 		setInterval(() => {
 			setShow(false);
-		}, 5000);
+		}, 2000);
 	}
 	return (
 		<div className="container col-4 mx-auto mt-3">
@@ -121,9 +121,9 @@ export const Details = props => {
 						}}>
 						<i className="fas fa-cart-plus" />
 					</button>
+					<span className={show ? "addToCart" : "d-none"}>ADDED TO CART</span>
 				</div>
 			</div>
-			<div className={show ? "text-center" : "d-none"}>Added to Cart</div>
 		</div>
 	);
 };
