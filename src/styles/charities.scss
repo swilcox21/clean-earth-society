@@ -16,11 +16,11 @@ img {
     cursor: pointer;
     font-weight: bold;
     color: rgb(0, 75, 0);
-    background-color: rgba(0, 128, 0, 0.507);
-    // border: 2px solid green;
+    background-color: rgba(255, 255, 255, 0.602);
+    border: 1px solid green;
     border-radius: 5px;
     padding: 8px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .payment:hover {
     float: right;
@@ -30,5 +30,26 @@ img {
     background-color: green;
     border-radius: 5px;
     padding: 8px;
-    font-size: 18px;
+    font-size: 16px;
+}
+.payment2 {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(0, 75, 0);
+    background-color: rgba(134, 255, 215, 0.9);
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 32px;
+}
+.payment2:hover {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(12,126,37,0.9);
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 32px;
 }

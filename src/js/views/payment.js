@@ -139,7 +139,7 @@ export const Payment = () => {
 					<ModalPayment show={showPayment} onClose={() => setShowPayment(false)} />
 					<div className="row mx-auto">
 						<div className="panel panel-default">
-							<div className="panel-heading">
+							<div className="panel-body">
 								<h3>Shipping Address</h3>
 								<div className="form-row mt-4">
 									<form onSubmit={handleChange} noValidate />
@@ -309,7 +309,7 @@ export const Payment = () => {
 							<div className="panel-body">
 								<form role="form">
 									<div className="row">
-										<div className="form-group">
+										<div className="form-group ml-3">
 											<label>CARD NUMBER</label>
 											<div className="input-group">
 												<input
@@ -332,7 +332,7 @@ export const Payment = () => {
 										</div>
 									</div>
 									<div className="row">
-										<div className="form-group">
+										<div className="form-group ml-3">
 											<label>
 												<span>EXPIRATION</span>
 											</label>
@@ -349,7 +349,7 @@ export const Payment = () => {
 												<span className="error">{errors.expDate}</span>
 											)}
 										</div>
-										<div className="form-group">
+										<div className="form-group ml-3">
 											<label>CV CODE</label>
 											<input
 												type="tel"
@@ -364,7 +364,7 @@ export const Payment = () => {
 										</div>
 									</div>
 									<div className="row">
-										<div className="form-group">
+										<div className="form-group ml-3">
 											<label>CARD OWNER</label>
 											<input
 												type="text"

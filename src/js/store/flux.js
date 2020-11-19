@@ -165,7 +165,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				for (let x of cart) {
 					total += x.subTotal;
 				}
-				return total;
+				return Math.round(total * 100) / 100;
 			},
 
 			loadSomeData: () => {

@@ -13,15 +13,17 @@ export const Home = () => {
 			<ModalWater show={showWater} onClose={() => setShowWater(false)} />
 			<div className="missionStatement">
 				<div className="appName">Clean Earth Society</div>
-				<h3 className="motto">Whether you believe its round or flat we can all agree it needs to be clean!</h3>
+				<h3 className="motto">
+					Whether you believe it&#39;s round or flat we can all agree it needs to be clean!
+				</h3>
 				<div className="container d-flex justify-content-center mt-3">
 					<Link to={`/charities`}>
-						<button href="#" className="btn btn-success mr-3">
+						<button href="#" className="btn payment2 mr-3">
 							Donate
 						</button>
 					</Link>
 					<Link to={`/shop`}>
-						<button href="#" className="btn btn-success ml-3 px-4">
+						<button href="#" className="btn payment2 ml-3 px-4">
 							Shop
 						</button>
 					</Link>
