@@ -23,9 +23,9 @@ export const Profile = props => {
 	};
 
 	return (
-		<div className="container col-4">
+		<div className="container loginBox col-3">
 			<div>
-				<h1 className="text-center mt-5">Profile</h1>
+				<h1 className="text-center mt-2">Profile</h1>
 				<small className="">* to edit any field just start typing then hit save *</small>
 
 				<form>
@@ -50,7 +50,11 @@ export const Profile = props => {
 						/>
 					</div>
 					<div className="form-group d-flex justify-content-between profileLabels">
-						<label className="mt-1">Email:</label>
+						<label className="mt-1">
+							Email:
+							<br />
+							&nbsp;
+						</label>
 						<input
 							type="email"
 							name="email"
@@ -60,9 +64,13 @@ export const Profile = props => {
 						/>
 					</div>
 					<div className="form-group  d-flex justify-content-between profileLabels">
-						<label className="mt-1">Password:</label>
+						<label className="mt-1">
+							Password:
+							<br />
+							&nbsp;
+						</label>
 						<input
-							type="phone"
+							type="password"
 							name="password"
 							className="form-control col-10 profileInputs"
 							value={userInfo.password}

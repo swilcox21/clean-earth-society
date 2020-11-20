@@ -350,9 +350,9 @@ export const Payment = () => {
 											)}
 										</div>
 										<div className="form-group ml-3">
-											<label>CV CODE</label>
+											<label>CVv CODE</label>
 											<input
-												type="tel"
+												type="password"
 												className="form-control"
 												placeholder="CVC"
 												id="cvv"
