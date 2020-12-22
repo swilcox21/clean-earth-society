@@ -109,7 +109,9 @@ export class Login extends React.Component {
 												<div className="col-md-12 text-center ">
 													<Link to={"/home"}>
 														<button
-															onClick={() => actions.logging()}
+															onClick={() =>
+																actions.logging(this.state.email, this.state.password)
+															}
 															type="submit"
 															className=" btn btn-block mybtn btn-primary tx-tfm">
 															LOGIN

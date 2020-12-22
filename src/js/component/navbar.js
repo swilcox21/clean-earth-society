@@ -66,12 +66,12 @@ export const NavBar = () => {
 							: null}
 					</div>
 				</a>
-				{store.active ? (
+				{store.token ? (
 					<>
 						<Link to="/profile">
 							<h5 className="welcome">Welcome, {store.user.firstName}</h5>
 						</Link>
-						<span className="logoutButton" onClick={() => actions.logging(store.active)}>
+						<span className="logoutButton" onClick={() => actions.logOut(store.token)}>
 							<Link to="/home">
 								<span className="navbar-brand signup">LOGOUT</span>
 							</Link>

@@ -153,7 +153,7 @@ export class SignUp extends React.Component {
 																};
 																actions.addUser(user);
 															}}
-															type="submit"
+															type="button"
 															className=" btn btn-block mybtn btn-primary tx-tfm mt-2 submit">
 															REGISTER
 														</button>

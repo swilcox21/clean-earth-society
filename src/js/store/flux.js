@@ -1,8 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			fetchURL: "https://3000-b8b3cc82-70d1-48a0-b9c7-ea988ccd36b4.ws-us02.gitpod.io",
-			active: false,
+			fetchURL: "https://3000-b8b3cc82-70d1-48a0-b9c7-ea988ccd36b4.ws-us03.gitpod.io",
+			token: null,
+			errors: "",
 			user: {},
 			history: [],
 			transactions: [],
@@ -62,8 +63,35 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			logging: active => {
-				setStore({ active: !active });
+			logging: (email, password) => {
+				const store = getStore();
+				fetch(store.fetchURL + "/login", {
+					method: "POST", // or 'POST'
+					body: JSON.stringify({
+						email: email,
+						password: password
+					}), // data can be `string` or {object}!
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(res => res.json())
+					.then(response => {
+						console.log("Success:", response);
+						setStore({
+							token: response
+						});
+					})
+					// sends error to user and to console log
+					.catch(error => {
+						setStore({ errors: error });
+						console.error("Error:", error);
+						return true;
+					});
+			},
+
+			logOut: () => {
+				setStore({ token: null });
 			},
 
 			editProfile: userInfo => {
@@ -77,39 +105,39 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return true;
 			},
 
-			addUser: user => {
-				setStore({ user: user });
-			},
-
 			// addUser: user => {
-			// 	let store = getStore();
-			// 	fetch(store.fetchURL + "/user", {
-			// 		method: "POST", // or 'POST'
-			// 		body: JSON.stringify({
-			// 			firstName: user.firstName,
-			// 			lastName: user.lastName,
-			// 			email: user.email,
-			// 			password: user.password,
-			// 			streetAddress: user.streetAddress ? user.streetAddress : "",
-			// 			city: user.city ? user.city : "",
-			// 			theState: user.theState ? user.theState : "",
-			// 			zipCode: user.zipCode ? user.zipCode : "",
-			// 			is_active: true
-			// 		}), // data can be `string` or {object}!
-			// 		headers: {
-			// 			"Content-Type": "application/json"
-			// 		}
-			// 	})
-			// 		.then(res => res.json())
-			// 		.then(response => {
-			// 			console.log("Success:", response);
-			// 			setStore({
-			// 				user: response
-			// 			});
-			// 		})
-			// 		.catch(error => console.error("Error:", error));
-			// 	return true;
+			// 	setStore({ user: user });
 			// },
+
+			addUser: user => {
+				console.log(user);
+				let store = getStore();
+				fetch(store.fetchURL + "/user", {
+					method: "POST", // or 'POST'
+					body: JSON.stringify({
+						firstName: user.firstName,
+						lastName: user.lastName,
+						email: user.email,
+						password: user.password
+					}), // data can be `string` or {object}!
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(res => res.json())
+					.then(response => {
+						console.log("Success:", response);
+						setStore({
+							user: response
+						});
+					})
+					// sends error to user and to console log
+					.catch(error => {
+						setStore({ errors: error });
+						console.error("Error:", error);
+						return true;
+					});
+			},
 
 			clearBuyNow: () => {
 				setStore({
