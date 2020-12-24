@@ -8,6 +8,7 @@
 
 <h1 align="center">
 	Click the logo to check it out and help save the planet!
+	<img src"https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true">
 	<a href="https://clean-earth-society.vercel.app/">
 		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/Screenshot%20(66).png?raw=true" width="300">
 	</a>
