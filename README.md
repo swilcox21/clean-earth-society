@@ -6,14 +6,15 @@
 	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="600">
 </h1>
 
-<h1 align="center">
+<h3>
 	Click the logo to check it out and help save the planet!
-	<img src"https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true">
+	<br>
+	<img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true">
+	<br>
 	<a href="https://clean-earth-society.vercel.app/">
 		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/Screenshot%20(66).png?raw=true" width="300">
 	</a>
-</h1>
-
+</h3>
 
 ### Requirements:
 - Make sure you are using node version 10
