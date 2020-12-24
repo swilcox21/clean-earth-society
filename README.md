@@ -2,9 +2,8 @@
 
 # Clean Earth Society
 
-<h1 align="center">
-	<br>	
-	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="400">
+<h1 align="center">	
+	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="600">
 </h1>
 
 ### Requirements:
