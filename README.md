@@ -4,7 +4,7 @@
 
 <h1 align="center">
 	<br>	
-	<img src="https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Clean Earth Pic" width="400">
+	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="400">
 </h1>
 
 ### Requirements:
