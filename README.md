@@ -3,8 +3,7 @@
 # Clean Earth Society
 
 <h1 align="center">
-	<br>
-	
+	<br>	
 	<img src="https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Clean Earth Pic" width="400">
 </h1>
 
