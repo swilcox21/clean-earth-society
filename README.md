@@ -3,18 +3,42 @@
 # Clean Earth Society
 
 <h1 align="center">	
-	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="600">
+	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="500">
 </h1>
 
-<h3>
+<h3 align="center">
 	Click the logo to check it out and help save the planet!
+	<a href="https://clean-earth-society.vercel.app/" target="_blank">
 	<br>
-	<img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true">
+	<img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true" height="50">
 	<br>
-	<a href="https://clean-earth-society.vercel.app/">
-		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/Screenshot%20(66).png?raw=true" width="300">
+		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/Screenshot%20(66).png?raw=true" width="200">
 	</a>
 </h3>
+
+# Demo
+### Login | Register | Edit 
+<h1>
+	<a href="https://clean-earth-society.vercel.app/login" target="_blank">
+		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-login.gif?raw=true" width="500"> 
+	</a>
+</h1>
+
+## Donate
+##### (takes user directly to the chosen charities donation page)
+<h1>
+	<a href="https://clean-earth-society.vercel.app/charities" target="_blank">
+		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-donate.gif?raw=true" width="500"> 
+	</a>
+</h1>
+
+## Shop
+<h1>
+	<a href="https://clean-earth-society.vercel.app/shop" target="_blank">
+		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-shop.gif?raw=true" width="500"> 
+	</a>
+</h1>
+
 
 ### Requirements:
 - Make sure you are using node version 10
