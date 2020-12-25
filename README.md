@@ -5,12 +5,21 @@
 <h1 align="center">	
 	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="500">
 </h1>
+<h4 align="center">An Environmental Charity Market Place</h4>
+
+&nbsp; &nbsp; &nbsp; A one stop shop for environmentally aware individuals looking to make a difference. Users will be presented with loads of
+valuable information on global environmental issues and given a list of informative articles to browse though and amazing
+charities to choose from to make a contribution towards improving the health of our planet.
+<br>
+<br>
+##### Languages:
+&nbsp; &nbsp; &nbsp; React.js, javascript, Python, HTML, css, bootstrap, Github, SQLAlchemy, Flux
 
 <h3>
 	Check it out!
 	<a href="https://clean-earth-society.vercel.app/" target="_blank">
 	<br>
-	<img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true" height="50">
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true" height="50">
 	<br>
 	https://clean-earth-society.vercel.app/
 	</a>
@@ -33,7 +42,7 @@
 </h1>
 
 ## Shop
-<h1>
+<h1>  
 	<a href="https://clean-earth-society.vercel.app/shop" target="_blank">
 		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-shop.gif?raw=true" width="500"> 
 	</a>
