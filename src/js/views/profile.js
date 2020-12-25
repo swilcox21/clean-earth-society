@@ -63,21 +63,7 @@ export const Profile = props => {
 							onChange={handleChange}
 						/>
 					</div>
-					<div className="form-group  d-flex justify-content-between profileLabels">
-						<label className="mt-1">
-							Password:
-							<br />
-							&nbsp;
-						</label>
-						<input
-							type="password"
-							name="password"
-							className="form-control col-10 profileInputs"
-							value={userInfo.password}
-							onChange={handleChange}
-						/>
-					</div>
-					{/* <div className="form-group d-flex justify-content-between profileLabels">
+					<div className="form-group d-flex justify-content-between profileLabels">
 						<label className="mt-1">Address:</label>
 						<input
 							type="text"
@@ -120,7 +106,7 @@ export const Profile = props => {
 							value={userInfo.zipCode}
 							onChange={handleChange}
 						/>
-					</div> */}
+					</div>
 					<button
 						type="button"
 						className="btn btn-primary form-control mb-3"
