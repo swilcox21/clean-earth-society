@@ -6,13 +6,13 @@
 	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="500">
 </h1>
 
-<h3 align="center">
-	Click the logo to check it out and help save the planet!
+<h3>
+	Check it out!
 	<a href="https://clean-earth-society.vercel.app/" target="_blank">
 	<br>
 	<img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true" height="50">
 	<br>
-		<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/Screenshot%20(66).png?raw=true" width="200">
+	https://clean-earth-society.vercel.app/
 	</a>
 </h3>
 
