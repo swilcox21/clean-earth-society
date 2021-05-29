@@ -1,7 +1,15 @@
 
 
 # Clean Earth Society
-
+<h3>
+	Check it out!
+	<a href="https://clean-earth-society.vercel.app/" target="_blank">
+	<br>
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true" height="50">
+	<br>
+	https://clean-earth-society.vercel.app/
+	</a>
+</h3>
 <h1 align="center">	
 	<img src="https://github.com/swilcox21/clean-earth-society/blob/master/src/img/clean-earth-society-homepage.gif?raw=true" width="500">
 </h1>
@@ -14,15 +22,7 @@ charities to choose from to make a contribution towards improving the health of 
 ##### Languages:
 &nbsp; &nbsp; &nbsp; React.js, javascript, Python, HTML, css, bootstrap, Github, SQLAlchemy, Flux
 
-<h3>
-	Check it out!
-	<a href="https://clean-earth-society.vercel.app/" target="_blank">
-	<br>
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="https://github.com/swilcox21/GIFs/blob/main/triple-down-arrows.gif?raw=true" height="50">
-	<br>
-	https://clean-earth-society.vercel.app/
-	</a>
-</h3>
+
 
 # Demo
 ### Login | Register | Edit Info
